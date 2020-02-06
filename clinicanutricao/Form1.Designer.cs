@@ -1,4 +1,4 @@
-﻿namespace clinicanutricao
+﻿namespace View
 {
     partial class Form1
     {

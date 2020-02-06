@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clinicanutricao", "clinicanutricao\clinicanutricao.csproj", "{75AF4440-4C53-4153-865C-9AFBAACECAAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "clinicanutricao\View.csproj", "{75AF4440-4C53-4153-865C-9AFBAACECAAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{FB2CBE07-C36F-4250-8EBE-8C9FDD29AD03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{1320DFFF-E825-4D6D-BD82-F9B35513EA4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{75AF4440-4C53-4153-865C-9AFBAACECAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75AF4440-4C53-4153-865C-9AFBAACECAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75AF4440-4C53-4153-865C-9AFBAACECAAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB2CBE07-C36F-4250-8EBE-8C9FDD29AD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB2CBE07-C36F-4250-8EBE-8C9FDD29AD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB2CBE07-C36F-4250-8EBE-8C9FDD29AD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB2CBE07-C36F-4250-8EBE-8C9FDD29AD03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1320DFFF-E825-4D6D-BD82-F9B35513EA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1320DFFF-E825-4D6D-BD82-F9B35513EA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1320DFFF-E825-4D6D-BD82-F9B35513EA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1320DFFF-E825-4D6D-BD82-F9B35513EA4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

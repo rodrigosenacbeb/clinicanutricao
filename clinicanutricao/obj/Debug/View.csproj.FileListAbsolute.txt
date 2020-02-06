@@ -1,0 +1,7 @@
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\view.Properties.Resources.resources
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\View.exe.config
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\View.exe
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\View.pdb
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.exe
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.pdb
