@@ -10,3 +10,7 @@ C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutric
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Correios.Net.dll
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Correios.Net.pdb
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.csproj.CopyComplete
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Model.dll
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Model.pdb
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Controller.dll
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Controller.pdb

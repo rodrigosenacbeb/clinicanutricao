@@ -1,14 +1,22 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using Model;
+using Controller;
 
 namespace View
 {
     public partial class FrmPacienteCadastro : Form
     {
-        public FrmPacienteCadastro()
+        Acao acaoSelecionada;
+        Prontuario prontuarioSelecionado;
+
+        public FrmPacienteCadastro(Prontuario prontuario, Acao acao)
         {
             InitializeComponent();
+
+            this.prontuarioSelecionado = prontuario;
+            this.acaoSelecionada = acao;
         }
 
         private void btnBuscarCep_Click(object sender, EventArgs e)
@@ -170,7 +178,74 @@ namespace View
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Validar();
+            switch (this.acaoSelecionada)
+            {
+                case Acao.Cadastrar:
+                    Cadastrar();
+                    break;
+            }
+
+        }
+
+        void Cadastrar()
+        {
+            if (btnSalvar.Text == "Novo")
+            {
+                btnSalvar.Text = "Salvar";
+                pnlDados.Enabled = true;
+            }
+            else
+            {
+                if (Validar())
+                {
+                    try
+                    {
+                        Prontuario prontuario = new Prontuario();
+                        prontuario.numero = txtNumeroProntuario.Text.Trim();
+                        prontuario.nome = txtNome.Text.Trim();
+                        prontuario.dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+
+                        if (cbxSexo.SelectedItem.ToString() == "Outros")
+                            prontuario.sexo = txtOutroSexo.Text.Trim();
+                        else
+                            prontuario.sexo = cbxSexo.SelectedItem.ToString();
+
+                        prontuario.telefoneFixo = txtTelefoneFixo.Text;
+                        prontuario.telefoneCelular = txtTelefoneCelular.Text;
+                        prontuario.nomeMae = txtNomeMae.Text.Trim();
+                        prontuario.nomePai = txtNomePai.Text.Trim();
+                        prontuario.CEP = txtCep.Text;
+                        prontuario.Logradouro = txtLogradouro.Text.Trim();
+                        prontuario.Bairro = txtBairro.Text.Trim();
+                        prontuario.Cidade = txtCidade.Text.Trim();
+                        prontuario.UF = cbxUF.SelectedItem.ToString();
+                        prontuario.OrigemEncaminhamento = txtOrigemEncaminhamento.Text.Trim();
+                        prontuario.MedicoResponsavel = txtMedicoResponsavel.Text.Trim();
+                        prontuario.Observacao = txtObservacoes.Text.Trim();
+
+                        ProntuarioController prontuarioController = new ProntuarioController();
+                        string codigo = prontuarioController.Cadastrar(prontuario);
+
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show("Algo deu errado: " + erro.Message);
+                    }
+                }
+            }
+        }
+
+        private void cbxSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxSexo.SelectedItem.ToString() == "Outros")
+            {
+                txtOutroSexo.Enabled = true;
+            }
+            else
+            {
+                txtOutroSexo.Enabled = false;
+                txtOutroSexo.Clear();
+            }
         }
     }
 }

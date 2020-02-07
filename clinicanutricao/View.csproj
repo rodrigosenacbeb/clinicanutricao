@@ -95,5 +95,15 @@
     <None Include="Resources\add.png" />
     <None Include="Resources\more.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{1320dfff-e825-4d6d-bd82-f9b35513ea4b}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{fb2cbe07-c36f-4250-8ebe-8c9fdd29ad03}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,9 +47,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNomePai = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNomeMae = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtOutroSexo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -145,9 +145,9 @@
             this.pnlDados.Controls.Add(this.label9);
             this.pnlDados.Controls.Add(this.txtDataNascimento);
             this.pnlDados.Controls.Add(this.label8);
-            this.pnlDados.Controls.Add(this.textBox4);
+            this.pnlDados.Controls.Add(this.txtNomePai);
             this.pnlDados.Controls.Add(this.label7);
-            this.pnlDados.Controls.Add(this.textBox3);
+            this.pnlDados.Controls.Add(this.txtNomeMae);
             this.pnlDados.Controls.Add(this.label6);
             this.pnlDados.Controls.Add(this.txtOutroSexo);
             this.pnlDados.Controls.Add(this.label5);
@@ -156,6 +156,7 @@
             this.pnlDados.Controls.Add(this.txtNumeroProntuario);
             this.pnlDados.Controls.Add(this.label3);
             this.pnlDados.Controls.Add(this.txtNome);
+            this.pnlDados.Enabled = false;
             this.pnlDados.Location = new System.Drawing.Point(10, 120);
             this.pnlDados.Name = "pnlDados";
             this.pnlDados.Size = new System.Drawing.Size(886, 500);
@@ -320,14 +321,14 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Nome do Pai:";
             // 
-            // textBox4
+            // txtNomePai
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(439, 193);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(425, 26);
-            this.textBox4.TabIndex = 8;
+            this.txtNomePai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomePai.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomePai.Location = new System.Drawing.Point(439, 193);
+            this.txtNomePai.Name = "txtNomePai";
+            this.txtNomePai.Size = new System.Drawing.Size(425, 26);
+            this.txtNomePai.TabIndex = 8;
             // 
             // label7
             // 
@@ -339,15 +340,15 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Nome da Mãe:";
             // 
-            // textBox3
+            // txtNomeMae
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNomeMae.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(22, 193);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(401, 26);
-            this.textBox3.TabIndex = 7;
+            this.txtNomeMae.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeMae.Location = new System.Drawing.Point(22, 193);
+            this.txtNomeMae.Name = "txtNomeMae";
+            this.txtNomeMae.Size = new System.Drawing.Size(401, 26);
+            this.txtNomeMae.TabIndex = 7;
             // 
             // label6
             // 
@@ -393,6 +394,7 @@
             this.cbxSexo.Name = "cbxSexo";
             this.cbxSexo.Size = new System.Drawing.Size(151, 28);
             this.cbxSexo.TabIndex = 3;
+            this.cbxSexo.SelectedIndexChanged += new System.EventHandler(this.cbxSexo_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -617,9 +619,9 @@
             this.btnBuscarCep.BackgroundImage = global::View.Properties.Resources.search;
             this.btnBuscarCep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBuscarCep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCep.Location = new System.Drawing.Point(93, 234);
+            this.btnBuscarCep.Location = new System.Drawing.Point(92, 236);
             this.btnBuscarCep.Name = "btnBuscarCep";
-            this.btnBuscarCep.Size = new System.Drawing.Size(19, 21);
+            this.btnBuscarCep.Size = new System.Drawing.Size(18, 21);
             this.btnBuscarCep.TabIndex = 37;
             this.btnBuscarCep.TabStop = false;
             this.toolTip.SetToolTip(this.btnBuscarCep, "Carregar endereço utilizando o CEP");
@@ -671,9 +673,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtOutroSexo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNomePai;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNomeMae;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox txtDataNascimento;
         private System.Windows.Forms.Label label11;
