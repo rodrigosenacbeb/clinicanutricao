@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
@@ -118,7 +111,7 @@ namespace View
             // Se todos os campos obrigatórios estiverem preenchidos vai retornar TRUE.
             if (String.IsNullOrWhiteSpace(txtNome.Text))
             {
-                errorProvider.SetError(txtNome, "Informe o nome do paciente");
+                errorProvider.SetError(txtNome, "Informe o nome");
                 errorProvider.SetIconPadding(txtNome, -20);
                 txtNome.Focus();
                 return false;
@@ -139,13 +132,38 @@ namespace View
                     errorProvider.SetError(txtDataNascimento, "Informe uma data de nascimento válida");
                     errorProvider.SetIconPadding(txtDataNascimento, -20);
                     txtDataNascimento.Focus();
-
+                    return false;
                 }
             }
 
+            if (cbxSexo.SelectedIndex < 0)
+            {
+                errorProvider.SetError(cbxSexo, "Informe o sexo");
+                errorProvider.SetIconPadding(cbxSexo, -20);
+                cbxSexo.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtLogradouro.Text))
+            {
+                errorProvider.SetError(txtLogradouro, "Informe o endereço");
+                errorProvider.SetIconPadding(txtLogradouro, -20);
+                txtLogradouro.Focus();
+                return false;
+            }
 
 
+            if (String.IsNullOrWhiteSpace(txtTelefoneCelular.Text.Replace("-", "").Replace("(", "").Replace(")", "").Trim()) && String.IsNullOrWhiteSpace(txtTelefoneFixo.Text.Replace("-", "").Replace("(", "").Replace(")", "").Trim()))
+            {
+                errorProvider.SetError(txtTelefoneCelular, "Informe um número de telefone fixo ou celular");
+                errorProvider.SetError(txtTelefoneFixo, "Informe um número de telefone fixo ou celular");
 
+                errorProvider.SetIconPadding(txtTelefoneCelular, -20);
+                errorProvider.SetIconPadding(txtTelefoneFixo, -20);
+
+                txtTelefoneFixo.Focus();
+                return false;
+            }
 
             return true;
         }
