@@ -6,11 +6,11 @@ namespace Model
     {       
         public string numero { get; set; }
         public string nome { get; set; }
+        public string sexo { get; set; }
         public string nomeMae { get; set; }
         public string nomePai { get; set; }
         public DateTime dataNascimento { get; set; }
         public string Logradouro { get; set; }
-        public string Numero { get; set; }
         public string Bairro { get; set; }
         public string CEP { get; set; }
         public string Cidade { get; set; }

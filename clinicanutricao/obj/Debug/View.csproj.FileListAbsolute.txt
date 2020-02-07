@@ -5,3 +5,8 @@ C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutric
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\View.pdb
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.exe
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.pdb
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.csprojAssemblyReference.cache
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.FrmPacienteCadastro.resources
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Correios.Net.dll
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Correios.Net.pdb
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.csproj.CopyComplete
