@@ -29,7 +29,7 @@ namespace View
                     MessageBox.Show("Informe um CEP válido!");
                     return;
                 }
-                  
+
 
                 System.Net.HttpWebRequest requisicao = (System.Net.HttpWebRequest)System.Net.WebRequest.Create("https://viacep.com.br/ws/" + txtCep.Text.Replace("-", "") + "/json/");
 
@@ -109,6 +109,50 @@ namespace View
                 MessageBox.Show("Algo deu errado. Detalhes: " + erro.Message);
             }
 
+        }
+
+        bool Validar()
+        {
+            errorProvider.Clear();
+
+            // Se todos os campos obrigatórios estiverem preenchidos vai retornar TRUE.
+            if (String.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                errorProvider.SetError(txtNome, "Informe o nome do paciente");
+                errorProvider.SetIconPadding(txtNome, -20);
+                txtNome.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtDataNascimento.Text.Replace("/", "")) || txtDataNascimento.Text.Replace("/", "").Length < 8)
+            {
+                errorProvider.SetError(txtDataNascimento, "Informe a data de nascimento");
+                errorProvider.SetIconPadding(txtDataNascimento, -20);
+                txtDataNascimento.Focus();
+                return false;
+            }
+            else
+            {
+                DateTime result;
+                if (!DateTime.TryParse(txtDataNascimento.Text, out result))
+                {
+                    errorProvider.SetError(txtDataNascimento, "Informe uma data de nascimento válida");
+                    errorProvider.SetIconPadding(txtDataNascimento, -20);
+                    txtDataNascimento.Focus();
+
+                }
+            }
+
+
+
+
+
+            return true;
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Validar();
         }
     }
 }

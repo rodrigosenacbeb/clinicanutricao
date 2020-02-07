@@ -75,8 +75,10 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnBuscarCep = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarCep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -608,6 +610,7 @@
             this.btnSalvar.Text = "Novo";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnBuscarCep
             // 
@@ -621,6 +624,10 @@
             this.btnBuscarCep.TabStop = false;
             this.toolTip.SetToolTip(this.btnBuscarCep, "Carregar endereço utilizando o CEP");
             this.btnBuscarCep.Click += new System.EventHandler(this.btnBuscarCep_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // FrmPacienteCadastro
             // 
@@ -642,6 +649,7 @@
             this.pnlDados.ResumeLayout(false);
             this.pnlDados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarCep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -694,6 +702,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox btnBuscarCep;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 
