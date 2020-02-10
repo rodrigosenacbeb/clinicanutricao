@@ -34,6 +34,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDados = new System.Windows.Forms.Panel();
+            this.btnBuscarCep = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtObservacoes = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtMedicoResponsavel = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtOrigemEncaminhamento = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtTelefoneCelular = new System.Windows.Forms.MaskedTextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtTelefoneFixo = new System.Windows.Forms.MaskedTextBox();
+            this.lblDataRegistro = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cbxUF = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -59,23 +72,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblDataRegistro = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtTelefoneFixo = new System.Windows.Forms.MaskedTextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtTelefoneCelular = new System.Windows.Forms.MaskedTextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtOrigemEncaminhamento = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtMedicoResponsavel = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtObservacoes = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnBuscarCep = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtIdade = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtClassificacao = new System.Windows.Forms.TextBox();
             this.pnlDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarCep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -119,6 +123,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDados.Controls.Add(this.label22);
+            this.pnlDados.Controls.Add(this.txtClassificacao);
+            this.pnlDados.Controls.Add(this.label21);
+            this.pnlDados.Controls.Add(this.txtIdade);
             this.pnlDados.Controls.Add(this.btnBuscarCep);
             this.pnlDados.Controls.Add(this.label20);
             this.pnlDados.Controls.Add(this.label19);
@@ -161,6 +169,145 @@
             this.pnlDados.Name = "pnlDados";
             this.pnlDados.Size = new System.Drawing.Size(886, 500);
             this.pnlDados.TabIndex = 4;
+            // 
+            // btnBuscarCep
+            // 
+            this.btnBuscarCep.BackgroundImage = global::View.Properties.Resources.search;
+            this.btnBuscarCep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscarCep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCep.Location = new System.Drawing.Point(92, 236);
+            this.btnBuscarCep.Name = "btnBuscarCep";
+            this.btnBuscarCep.Size = new System.Drawing.Size(18, 21);
+            this.btnBuscarCep.TabIndex = 37;
+            this.btnBuscarCep.TabStop = false;
+            this.toolTip.SetToolTip(this.btnBuscarCep, "Carregar endereço utilizando o CEP");
+            this.btnBuscarCep.Click += new System.EventHandler(this.btnBuscarCep_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(183, 33);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(54, 20);
+            this.label20.TabIndex = 36;
+            this.label20.Text = "*Nome:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(20, 424);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(94, 20);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "Observações:";
+            // 
+            // txtObservacoes
+            // 
+            this.txtObservacoes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObservacoes.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacoes.Location = new System.Drawing.Point(22, 447);
+            this.txtObservacoes.Multiline = true;
+            this.txtObservacoes.Name = "txtObservacoes";
+            this.txtObservacoes.Size = new System.Drawing.Size(846, 39);
+            this.txtObservacoes.TabIndex = 17;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(20, 360);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(141, 20);
+            this.label18.TabIndex = 33;
+            this.label18.Text = "Médico Responsável:";
+            // 
+            // txtMedicoResponsavel
+            // 
+            this.txtMedicoResponsavel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMedicoResponsavel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedicoResponsavel.Location = new System.Drawing.Point(22, 383);
+            this.txtMedicoResponsavel.Name = "txtMedicoResponsavel";
+            this.txtMedicoResponsavel.Size = new System.Drawing.Size(846, 26);
+            this.txtMedicoResponsavel.TabIndex = 15;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(20, 298);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(187, 20);
+            this.label17.TabIndex = 31;
+            this.label17.Text = "Origem do Encaminhamento: ";
+            // 
+            // txtOrigemEncaminhamento
+            // 
+            this.txtOrigemEncaminhamento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtOrigemEncaminhamento.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrigemEncaminhamento.Location = new System.Drawing.Point(22, 320);
+            this.txtOrigemEncaminhamento.Name = "txtOrigemEncaminhamento";
+            this.txtOrigemEncaminhamento.Size = new System.Drawing.Size(846, 26);
+            this.txtOrigemEncaminhamento.TabIndex = 14;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(754, 105);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(110, 20);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Telefone Celular:";
+            // 
+            // txtTelefoneCelular
+            // 
+            this.txtTelefoneCelular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefoneCelular.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.txtTelefoneCelular.Location = new System.Drawing.Point(758, 128);
+            this.txtTelefoneCelular.Mask = "(##) #####-####";
+            this.txtTelefoneCelular.Name = "txtTelefoneCelular";
+            this.txtTelefoneCelular.Size = new System.Drawing.Size(106, 26);
+            this.txtTelefoneCelular.TabIndex = 6;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(645, 105);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 20);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Telefone Fixo:";
+            // 
+            // txtTelefoneFixo
+            // 
+            this.txtTelefoneFixo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefoneFixo.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.txtTelefoneFixo.Location = new System.Drawing.Point(649, 128);
+            this.txtTelefoneFixo.Mask = "(##) ####-####";
+            this.txtTelefoneFixo.Name = "txtTelefoneFixo";
+            this.txtTelefoneFixo.Size = new System.Drawing.Size(97, 26);
+            this.txtTelefoneFixo.TabIndex = 5;
+            // 
+            // lblDataRegistro
+            // 
+            this.lblDataRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDataRegistro.AutoSize = true;
+            this.lblDataRegistro.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblDataRegistro.Location = new System.Drawing.Point(719, 21);
+            this.lblDataRegistro.Name = "lblDataRegistro";
+            this.lblDataRegistro.Size = new System.Drawing.Size(147, 14);
+            this.lblDataRegistro.TabIndex = 5;
+            this.lblDataRegistro.Text = "Data do Registro: 00/00/0000";
             // 
             // label14
             // 
@@ -295,7 +442,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 102);
+            this.label9.Location = new System.Drawing.Point(20, 105);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(138, 20);
             this.label9.TabIndex = 13;
@@ -304,18 +451,19 @@
             // txtDataNascimento
             // 
             this.txtDataNascimento.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtDataNascimento.Location = new System.Drawing.Point(22, 127);
+            this.txtDataNascimento.Location = new System.Drawing.Point(22, 128);
             this.txtDataNascimento.Mask = "##/##/####";
             this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(151, 26);
+            this.txtDataNascimento.Size = new System.Drawing.Size(139, 26);
             this.txtDataNascimento.TabIndex = 2;
+            this.txtDataNascimento.Leave += new System.EventHandler(this.txtDataNascimento_Leave);
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(435, 170);
+            this.label8.Location = new System.Drawing.Point(436, 170);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 20);
             this.label8.TabIndex = 11;
@@ -354,7 +502,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(354, 102);
+            this.label6.Location = new System.Drawing.Point(549, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 20);
             this.label6.TabIndex = 7;
@@ -366,16 +514,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOutroSexo.Enabled = false;
             this.txtOutroSexo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOutroSexo.Location = new System.Drawing.Point(354, 127);
+            this.txtOutroSexo.Location = new System.Drawing.Point(553, 128);
             this.txtOutroSexo.Name = "txtOutroSexo";
-            this.txtOutroSexo.Size = new System.Drawing.Size(261, 26);
+            this.txtOutroSexo.Size = new System.Drawing.Size(82, 26);
             this.txtOutroSexo.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(187, 102);
+            this.label5.Location = new System.Drawing.Point(420, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 5;
@@ -384,15 +532,15 @@
             // cbxSexo
             // 
             this.cbxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSexo.Font = new System.Drawing.Font("Arial Narrow", 11F);
+            this.cbxSexo.Font = new System.Drawing.Font("Arial Narrow", 10F);
             this.cbxSexo.FormattingEnabled = true;
             this.cbxSexo.Items.AddRange(new object[] {
             "Masculino",
             "Feminino",
             "Outros"});
-            this.cbxSexo.Location = new System.Drawing.Point(187, 126);
+            this.cbxSexo.Location = new System.Drawing.Point(424, 129);
             this.cbxSexo.Name = "cbxSexo";
-            this.cbxSexo.Size = new System.Drawing.Size(151, 28);
+            this.cbxSexo.Size = new System.Drawing.Size(116, 24);
             this.cbxSexo.TabIndex = 3;
             this.cbxSexo.SelectedIndexChanged += new System.EventHandler(this.cbxSexo_SelectedIndexChanged);
             // 
@@ -419,7 +567,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 130);
+            this.label3.Location = new System.Drawing.Point(54, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 1;
@@ -444,132 +592,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(913, 21);
             this.panel3.TabIndex = 4;
-            // 
-            // lblDataRegistro
-            // 
-            this.lblDataRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDataRegistro.AutoSize = true;
-            this.lblDataRegistro.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDataRegistro.Location = new System.Drawing.Point(719, 21);
-            this.lblDataRegistro.Name = "lblDataRegistro";
-            this.lblDataRegistro.Size = new System.Drawing.Size(147, 14);
-            this.lblDataRegistro.TabIndex = 5;
-            this.lblDataRegistro.Text = "Data do Registro: 00/00/0000";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(625, 102);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 20);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Telefone Fixo:";
-            // 
-            // txtTelefoneFixo
-            // 
-            this.txtTelefoneFixo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefoneFixo.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtTelefoneFixo.Location = new System.Drawing.Point(629, 127);
-            this.txtTelefoneFixo.Mask = "(##) ####-####";
-            this.txtTelefoneFixo.Name = "txtTelefoneFixo";
-            this.txtTelefoneFixo.Size = new System.Drawing.Size(111, 26);
-            this.txtTelefoneFixo.TabIndex = 5;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(751, 102);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(110, 20);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "Telefone Celular:";
-            // 
-            // txtTelefoneCelular
-            // 
-            this.txtTelefoneCelular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefoneCelular.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtTelefoneCelular.Location = new System.Drawing.Point(755, 127);
-            this.txtTelefoneCelular.Mask = "(##) #####-####";
-            this.txtTelefoneCelular.Name = "txtTelefoneCelular";
-            this.txtTelefoneCelular.Size = new System.Drawing.Size(109, 26);
-            this.txtTelefoneCelular.TabIndex = 6;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(20, 298);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(187, 20);
-            this.label17.TabIndex = 31;
-            this.label17.Text = "Origem do Encaminhamento: ";
-            // 
-            // txtOrigemEncaminhamento
-            // 
-            this.txtOrigemEncaminhamento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOrigemEncaminhamento.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrigemEncaminhamento.Location = new System.Drawing.Point(22, 320);
-            this.txtOrigemEncaminhamento.Name = "txtOrigemEncaminhamento";
-            this.txtOrigemEncaminhamento.Size = new System.Drawing.Size(846, 26);
-            this.txtOrigemEncaminhamento.TabIndex = 14;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(20, 360);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(141, 20);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "Médico Responsável:";
-            // 
-            // txtMedicoResponsavel
-            // 
-            this.txtMedicoResponsavel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMedicoResponsavel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMedicoResponsavel.Location = new System.Drawing.Point(22, 383);
-            this.txtMedicoResponsavel.Name = "txtMedicoResponsavel";
-            this.txtMedicoResponsavel.Size = new System.Drawing.Size(846, 26);
-            this.txtMedicoResponsavel.TabIndex = 15;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(20, 424);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(94, 20);
-            this.label19.TabIndex = 35;
-            this.label19.Text = "Observações:";
-            // 
-            // txtObservacoes
-            // 
-            this.txtObservacoes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObservacoes.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacoes.Location = new System.Drawing.Point(22, 447);
-            this.txtObservacoes.Multiline = true;
-            this.txtObservacoes.Name = "txtObservacoes";
-            this.txtObservacoes.Size = new System.Drawing.Size(846, 39);
-            this.txtObservacoes.TabIndex = 17;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(183, 33);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(54, 20);
-            this.label20.TabIndex = 36;
-            this.label20.Text = "*Nome:";
             // 
             // btnCancelar
             // 
@@ -614,22 +636,47 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // btnBuscarCep
-            // 
-            this.btnBuscarCep.BackgroundImage = global::View.Properties.Resources.search;
-            this.btnBuscarCep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscarCep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCep.Location = new System.Drawing.Point(92, 236);
-            this.btnBuscarCep.Name = "btnBuscarCep";
-            this.btnBuscarCep.Size = new System.Drawing.Size(18, 21);
-            this.btnBuscarCep.TabIndex = 37;
-            this.btnBuscarCep.TabStop = false;
-            this.toolTip.SetToolTip(this.btnBuscarCep, "Carregar endereço utilizando o CEP");
-            this.btnBuscarCep.Click += new System.EventHandler(this.btnBuscarCep_Click);
-            // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            // 
+            // txtIdade
+            // 
+            this.txtIdade.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Location = new System.Drawing.Point(174, 128);
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.ReadOnly = true;
+            this.txtIdade.Size = new System.Drawing.Size(67, 26);
+            this.txtIdade.TabIndex = 38;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(174, 105);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 20);
+            this.label21.TabIndex = 39;
+            this.label21.Text = "Idade:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(254, 105);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(91, 20);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "Classificação:";
+            // 
+            // txtClassificacao
+            // 
+            this.txtClassificacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClassificacao.Location = new System.Drawing.Point(254, 128);
+            this.txtClassificacao.Name = "txtClassificacao";
+            this.txtClassificacao.ReadOnly = true;
+            this.txtClassificacao.Size = new System.Drawing.Size(156, 26);
+            this.txtClassificacao.TabIndex = 40;
             // 
             // FrmPacienteCadastro
             // 
@@ -705,6 +752,10 @@
         private System.Windows.Forms.PictureBox btnBuscarCep;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtIdade;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtClassificacao;
     }
 }
 

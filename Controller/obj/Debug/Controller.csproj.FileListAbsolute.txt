@@ -6,3 +6,4 @@ C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Controller\bi
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Controller\bin\Debug\Model.pdb
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Controller\bin\Debug\Controller.dll.config

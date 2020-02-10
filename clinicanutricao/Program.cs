@@ -17,6 +17,7 @@ namespace View
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmPacienteCadastro(null, Model.Acao.Cadastrar));
+            //Application.Run(new FrmConfiguracoes());
         }
     }
 }

@@ -52,16 +52,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfiguracoes.Designer.cs">
+      <DependentUpon>FrmConfiguracoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPacienteCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPacienteCadastro.Designer.cs">
       <DependentUpon>FrmPacienteCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPacientePesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPacientePesquisar.Designer.cs">
+      <DependentUpon>FrmPacientePesquisar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmConfiguracoes.resx">
+      <DependentUpon>FrmConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPacienteCadastro.resx">
       <DependentUpon>FrmPacienteCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPacientePesquisar.resx">
+      <DependentUpon>FrmPacientePesquisar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
