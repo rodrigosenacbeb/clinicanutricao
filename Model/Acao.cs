@@ -4,6 +4,8 @@
     {
         Cadastrar,
         Atualizar,
-        Pesquisar
+        Pesquisar,
+        Visualizar,
+        Selecionar,
     }
 }

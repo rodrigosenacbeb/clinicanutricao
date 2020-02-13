@@ -20,6 +20,27 @@ namespace View
             this.acaoSelecionada = acao;
 
             txtNumeroProntuario.Text = prontuarioController.UltimoNumeroProntuario();
+
+            switch (acao)
+            {
+                case Acao.Cadastrar:
+                    lblAcao.Text = "CADASTRO";
+                    btnSalvar.Text = "Novo";
+                    lblDataRegistro.Visible = false;
+                    break;
+                case Acao.Atualizar:
+                    lblAcao.Text = "ATUALIZAR";
+                    btnSalvar.Text = "Alterar";                    
+                    Carregar();
+                    lblDataRegistro.Text = "Data do Registro: " + this.prontuarioSelecionado.dataRegistro.ToShortDateString();
+                    break;
+                case Acao.Visualizar:
+                    lblAcao.Text = "VISUALIZAR";
+                    Carregar();
+                    btnSalvar.Visible = false;
+                    lblDataRegistro.Text = "Data do Registro: " + this.prontuarioSelecionado.dataRegistro.ToShortDateString();
+                    break;
+            }
         }
 
         private void btnBuscarCep_Click(object sender, EventArgs e)
@@ -186,8 +207,10 @@ namespace View
                 case Acao.Cadastrar:
                     Cadastrar();
                     break;
+                case Acao.Atualizar:
+                    Atualizar();
+                    break;
             }
-
         }
 
         void Cadastrar()
@@ -223,7 +246,7 @@ namespace View
                         if (txtTelefoneCelular.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Length > 0)
                             prontuario.telefoneCelular = txtTelefoneCelular.Text;
                         else
-                            prontuario.telefoneCelular = "";                            
+                            prontuario.telefoneCelular = "";
 
                         prontuario.nomeMae = txtNomeMae.Text.Trim();
                         prontuario.nomePai = txtNomePai.Text.Trim();
@@ -239,7 +262,7 @@ namespace View
                         int codigo = prontuarioController.Cadastrar(prontuario);
 
                         MessageBox.Show("Prontuário salvo com sucesso!", "Prontuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        this.Close();
                     }
                     catch (Exception erro)
                     {
@@ -293,6 +316,112 @@ namespace View
                 }
 
                 txtIdade.Text = idade.ToString();
+            }
+        }
+
+        void Carregar()
+        {
+            txtNumeroProntuario.Text = this.prontuarioSelecionado.numero.ToString();
+            txtNome.Text = this.prontuarioSelecionado.nome;
+            txtDataNascimento.Text = this.prontuarioSelecionado.dataNascimento.ToShortDateString();
+            txtIdade.Text = this.prontuarioSelecionado.idade.ToString();
+            txtClassificacao.Text = this.prontuarioSelecionado.classificacao;
+
+            switch (this.prontuarioSelecionado.sexo)
+            {
+                case "Masculino":
+                    cbxSexo.SelectedItem = "Masculino";
+                    break;
+                case "Feminino":
+                    cbxSexo.SelectedItem = "Feminino";
+                    break;
+                default:
+                    cbxSexo.SelectedItem = "Outros";
+                    txtOutroSexo.Text = this.prontuarioSelecionado.sexo;
+                    txtOutroSexo.Enabled = true;
+                    break;
+            }
+
+            txtTelefoneFixo.Text = this.prontuarioSelecionado.telefoneFixo;
+            txtTelefoneCelular.Text = this.prontuarioSelecionado.telefoneCelular;
+            txtNomeMae.Text = this.prontuarioSelecionado.nomeMae;
+
+            txtNomePai.Text = this.prontuarioSelecionado.nomePai;
+            txtCep.Text = this.prontuarioSelecionado.cep;
+            txtLogradouro.Text = this.prontuarioSelecionado.logradouro;
+
+            txtBairro.Text = this.prontuarioSelecionado.bairro;
+            txtCidade.Text = this.prontuarioSelecionado.cidade;
+            cbxUF.SelectedItem = this.prontuarioSelecionado.uf;
+            txtOrigemEncaminhamento.Text = this.prontuarioSelecionado.origemEncaminhamento;
+            txtMedicoResponsavel.Text = this.prontuarioSelecionado.medicoResponsavel;
+            txtObservacoes.Text = this.prontuarioSelecionado.observacao;
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        void Atualizar()
+        {
+            if (btnSalvar.Text == "Alterar")
+            {
+                btnSalvar.Text = "Salvar";
+                pnlDados.Enabled = true;
+                txtNome.Focus();
+            }
+            else
+            {
+                if (Validar())
+                {
+                    try
+                    {
+                        Prontuario prontuario = new Prontuario();
+                        prontuario.codigo = this.prontuarioSelecionado.codigo;
+                        prontuario.numero = txtNumeroProntuario.Text.Trim();
+                        prontuario.nome = txtNome.Text.Trim();
+                        prontuario.dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+                        prontuario.idade = Convert.ToInt32(txtIdade.Text);
+                        prontuario.classificacao = txtClassificacao.Text;
+
+                        if (cbxSexo.SelectedItem.ToString() == "Outros")
+                            prontuario.sexo = txtOutroSexo.Text.Trim();
+                        else
+                            prontuario.sexo = cbxSexo.SelectedItem.ToString();
+
+                        if (txtTelefoneFixo.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Length > 0)
+                            prontuario.telefoneFixo = txtTelefoneFixo.Text;
+                        else
+                            prontuario.telefoneFixo = "";
+                        if (txtTelefoneCelular.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "").Length > 0)
+                            prontuario.telefoneCelular = txtTelefoneCelular.Text;
+                        else
+                            prontuario.telefoneCelular = "";
+
+                        prontuario.nomeMae = txtNomeMae.Text.Trim();
+                        prontuario.nomePai = txtNomePai.Text.Trim();
+                        prontuario.cep = txtCep.Text.Replace("-", "");
+                        prontuario.logradouro = txtLogradouro.Text.Trim();
+                        prontuario.bairro = txtBairro.Text.Trim();
+                        prontuario.cidade = txtCidade.Text.Trim();
+                        prontuario.uf = cbxUF.SelectedItem.ToString();
+                        prontuario.origemEncaminhamento = txtOrigemEncaminhamento.Text.Trim();
+                        prontuario.medicoResponsavel = txtMedicoResponsavel.Text.Trim();
+                        prontuario.observacao = txtObservacoes.Text.Trim();
+
+                        int codigo = prontuarioController.Alterar(prontuario);
+
+                        MessageBox.Show("Prontuário salvo com sucesso!", "Prontuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show("Algo deu errado: " + erro.Message, "Op's", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }

@@ -87,5 +87,67 @@ namespace Controller
             return "";
         }
 
+        public DataTable Pesquisar(string nome)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM TBPRONTUARIO WHERE nome LIKE '%" + nome + "%' ORDER BY nome", conexaoBanco.Conectar());
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                
+                return dt;                
+            }
+            catch
+            {
+                throw new Exception();
+            }
+            finally
+            {
+                conexaoBanco.Fechar();
+            }
+        }
+
+        public int Alterar(Prontuario prontuario)
+        {
+            try
+            {
+                string query = "UPDATE TBPRONTUARIO SET numero = @numero , nome = @nome , sexo = @sexo, nomemae = @nomemae, nomepai = @nomepai, datanascimento = @datanascimento, idade = @idade, classificacao = @classificacao, logradouro = @logradouro, bairro = @bairro, cep = @cep, cidade = @cidade, uf = @uf, dataregistro = @dataregistro, telefoneFixo = @telefoneFixo, telefoneCelular = @telefoneCelular, origemEncaminhamento = @origemEncaminhamento, medicoResponsavel = @medicoResponsavel, observacao = @observacao WHERE codigo = @codigo";
+
+                SqlCommand command = new SqlCommand(query, conexaoBanco.Conectar());
+                command.Parameters.AddWithValue("@codigo", prontuario.codigo);
+                command.Parameters.AddWithValue("@numero", prontuario.numero);
+                command.Parameters.AddWithValue("@nome", prontuario.nome);
+                command.Parameters.AddWithValue("@sexo", prontuario.sexo);
+                command.Parameters.AddWithValue("@nomemae", prontuario.nomeMae);
+                command.Parameters.AddWithValue("@nomepai", prontuario.nomePai);
+                command.Parameters.AddWithValue("@datanascimento", prontuario.dataNascimento);
+                command.Parameters.AddWithValue("@idade", prontuario.idade);
+                command.Parameters.AddWithValue("@classificacao", prontuario.classificacao);
+                command.Parameters.AddWithValue("@logradouro", prontuario.logradouro);
+                command.Parameters.AddWithValue("@bairro", prontuario.bairro);
+                command.Parameters.AddWithValue("@cep", prontuario.cep);
+                command.Parameters.AddWithValue("@cidade", prontuario.cidade);
+                command.Parameters.AddWithValue("@uf", prontuario.uf);
+                command.Parameters.AddWithValue("@dataregistro", DateTime.Today.ToShortDateString());
+                command.Parameters.AddWithValue("@telefoneFixo", prontuario.telefoneFixo);
+                command.Parameters.AddWithValue("@telefoneCelular", prontuario.telefoneCelular);
+                command.Parameters.AddWithValue("@origemEncaminhamento", prontuario.origemEncaminhamento);
+                command.Parameters.AddWithValue("@medicoResponsavel", prontuario.medicoResponsavel);
+                command.Parameters.AddWithValue("@observacao", prontuario.observacao);
+
+                return Convert.ToInt32(command.ExecuteNonQuery());
+            }
+            catch
+            {
+                throw new Exception();
+            }
+            finally
+            {
+                conexaoBanco.Fechar();
+            }
+
+        }
+
     }
 }

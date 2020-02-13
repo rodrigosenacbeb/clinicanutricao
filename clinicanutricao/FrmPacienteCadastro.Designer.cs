@@ -31,9 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPacienteCadastro));
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAcao = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDados = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtClassificacao = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtIdade = new System.Windows.Forms.TextBox();
             this.btnBuscarCep = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -76,10 +80,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtIdade = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtClassificacao = new System.Windows.Forms.TextBox();
             this.pnlDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarCep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -96,16 +96,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "PRONTUÁRIO";
             // 
-            // label1
+            // lblAcao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(13, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "CADASTRO";
+            this.lblAcao.AutoSize = true;
+            this.lblAcao.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(65)))));
+            this.lblAcao.Location = new System.Drawing.Point(13, 16);
+            this.lblAcao.Name = "lblAcao";
+            this.lblAcao.Size = new System.Drawing.Size(123, 24);
+            this.lblAcao.TabIndex = 2;
+            this.lblAcao.Text = "CADASTRO";
             // 
             // panel1
             // 
@@ -169,6 +169,44 @@
             this.pnlDados.Name = "pnlDados";
             this.pnlDados.Size = new System.Drawing.Size(886, 500);
             this.pnlDados.TabIndex = 4;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(254, 105);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(91, 20);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "Classificação:";
+            // 
+            // txtClassificacao
+            // 
+            this.txtClassificacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClassificacao.Location = new System.Drawing.Point(254, 128);
+            this.txtClassificacao.Name = "txtClassificacao";
+            this.txtClassificacao.ReadOnly = true;
+            this.txtClassificacao.Size = new System.Drawing.Size(156, 26);
+            this.txtClassificacao.TabIndex = 40;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(174, 105);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 20);
+            this.label21.TabIndex = 39;
+            this.label21.Text = "Idade:";
+            // 
+            // txtIdade
+            // 
+            this.txtIdade.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Location = new System.Drawing.Point(174, 128);
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.ReadOnly = true;
+            this.txtIdade.Size = new System.Drawing.Size(67, 26);
+            this.txtIdade.TabIndex = 38;
             // 
             // btnBuscarCep
             // 
@@ -613,6 +651,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -640,44 +679,6 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // txtIdade
-            // 
-            this.txtIdade.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdade.Location = new System.Drawing.Point(174, 128);
-            this.txtIdade.Name = "txtIdade";
-            this.txtIdade.ReadOnly = true;
-            this.txtIdade.Size = new System.Drawing.Size(67, 26);
-            this.txtIdade.TabIndex = 38;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(174, 105);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(47, 20);
-            this.label21.TabIndex = 39;
-            this.label21.Text = "Idade:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(254, 105);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(91, 20);
-            this.label22.TabIndex = 41;
-            this.label22.Text = "Classificação:";
-            // 
-            // txtClassificacao
-            // 
-            this.txtClassificacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClassificacao.Location = new System.Drawing.Point(254, 128);
-            this.txtClassificacao.Name = "txtClassificacao";
-            this.txtClassificacao.ReadOnly = true;
-            this.txtClassificacao.Size = new System.Drawing.Size(156, 26);
-            this.txtClassificacao.TabIndex = 40;
-            // 
             // FrmPacienteCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -689,7 +690,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlDados);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAcao);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPacienteCadastro";
@@ -707,7 +708,7 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAcao;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlDados;
         private System.Windows.Forms.Panel panel3;

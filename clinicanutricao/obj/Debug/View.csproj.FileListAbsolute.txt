@@ -17,3 +17,5 @@ C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutric
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.FrmConfiguracoes.resources
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\bin\Debug\Controller.dll.config
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.FrmPacientePesquisar.resources
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.FrmAgendamento.resources
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.FrmAgendamentoPesquisar.resources

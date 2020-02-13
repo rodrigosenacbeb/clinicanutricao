@@ -3,7 +3,8 @@
 namespace Model
 {
     public class Prontuario
-    {       
+    {
+        public int codigo { get; set; }
         public string numero { get; set; }
         public string nome { get; set; }
         public string sexo { get; set; }
@@ -11,7 +12,7 @@ namespace Model
         public string classificacao { get; set; }
         public string nomeMae { get; set; }
         public string nomePai { get; set; }
-        public DateTime dataNascimento { get; set; }
+        public DateTime dataNascimento { get; set; }        
         public string logradouro { get; set; }
         public string bairro { get; set; }
         public string cep { get; set; }
