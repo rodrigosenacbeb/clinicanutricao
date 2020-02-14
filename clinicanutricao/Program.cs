@@ -20,6 +20,7 @@ namespace View
             //Application.Run(new FrmConfiguracoes());
             //Application.Run(new FrmAgendamento(null, Model.Acao.Cadastrar));
            // Application.Run(new FrmPacientePesquisar());
+           //Application.Run(new FrmAgendamento(null, Model.Acao.Cadastrar));
            Application.Run(new FrmAgendamentoPesquisar());
         }
     }

@@ -1,5 +1,4 @@
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Model\bin\Debug\Model.dll
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Model\bin\Debug\Model.pdb
-C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Model\obj\Debug\Model.csprojAssemblyReference.cache
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Model\obj\Debug\Model.dll
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\Model\obj\Debug\Model.pdb

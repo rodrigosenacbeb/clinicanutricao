@@ -16,6 +16,6 @@ namespace Model
         public string observacoes { get; set; }
         public DateTime data_registro { get; set; }
         public string tipo { get; set; }
-        public int status { get; set; }
+        public string status { get; set; }
     }
 }

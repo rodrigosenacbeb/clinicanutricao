@@ -92,6 +92,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -333,9 +334,11 @@
             // mtcCalendario
             // 
             this.mtcCalendario.Location = new System.Drawing.Point(14, 313);
+            this.mtcCalendario.MaxSelectionCount = 1;
             this.mtcCalendario.Name = "mtcCalendario";
+            this.mtcCalendario.ShowTodayCircle = false;
             this.mtcCalendario.TabIndex = 8;
-            this.mtcCalendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mtcCalendario_DateChanged);
+            this.mtcCalendario.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(65)))));
             // 
             // tableLayoutPanel1
             // 
@@ -504,7 +507,7 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // FrmAngedamento
+            // FrmAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -518,7 +521,7 @@
             this.Controls.Add(this.lblAcao);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmAngedamento";
+            this.Name = "FrmAgendamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAngedamento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

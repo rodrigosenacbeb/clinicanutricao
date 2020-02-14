@@ -7,5 +7,6 @@
         Pesquisar,
         Visualizar,
         Selecionar,
+        Excluir,
     }
 }
