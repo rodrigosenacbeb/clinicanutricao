@@ -15,8 +15,15 @@ namespace View
             txtData.Text = agendamento.data_agendamento.ToShortDateString();
             cbxHorario.SelectedItem = agendamento.hora;
             cbxConsultorio.SelectedItem = agendamento.consultorio;
+        }
 
-
+        private void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            FrmPacientePesquisar frmPacientePesquisar = new FrmPacientePesquisar(Acao.Selecionar);
+            if (frmPacientePesquisar.ShowDialog() == DialogResult.OK)
+            {
+                lblcodigo.Text = frmPacientePesquisar.prontuario.codigo.ToString();               
+            }
         }
     }
 }

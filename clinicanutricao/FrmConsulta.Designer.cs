@@ -37,6 +37,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlDados = new System.Windows.Forms.Panel();
+            this.txtData = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNomeAlunoAtendeu = new System.Windows.Forms.TextBox();
+            this.cbxConsultorio = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxHorario = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNumeroProntuario = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -46,16 +54,11 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.cbxConsultorio = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbxHorario = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNomeAlunoAtendeu = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtData = new System.Windows.Forms.TextBox();
+            this.btnSelecionar = new System.Windows.Forms.PictureBox();
+            this.lblcodigo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.pnlDados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSelecionar)).BeginInit();
             this.SuspendLayout();
             // 
             // label20
@@ -122,6 +125,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDados.Controls.Add(this.lblcodigo);
+            this.pnlDados.Controls.Add(this.btnSelecionar);
             this.pnlDados.Controls.Add(this.txtData);
             this.pnlDados.Controls.Add(this.label6);
             this.pnlDados.Controls.Add(this.label3);
@@ -142,6 +147,97 @@
             this.pnlDados.Name = "pnlDados";
             this.pnlDados.Size = new System.Drawing.Size(886, 291);
             this.pnlDados.TabIndex = 11;
+            // 
+            // txtData
+            // 
+            this.txtData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtData.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.txtData.Location = new System.Drawing.Point(22, 130);
+            this.txtData.Name = "txtData";
+            this.txtData.ReadOnly = true;
+            this.txtData.Size = new System.Drawing.Size(118, 26);
+            this.txtData.TabIndex = 76;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 105);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 20);
+            this.label6.TabIndex = 75;
+            this.label6.Text = "Data:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(417, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 20);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "*Nome do aluno que atendeu:";
+            // 
+            // txtNomeAlunoAtendeu
+            // 
+            this.txtNomeAlunoAtendeu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomeAlunoAtendeu.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.txtNomeAlunoAtendeu.Location = new System.Drawing.Point(425, 130);
+            this.txtNomeAlunoAtendeu.Name = "txtNomeAlunoAtendeu";
+            this.txtNomeAlunoAtendeu.Size = new System.Drawing.Size(439, 26);
+            this.txtNomeAlunoAtendeu.TabIndex = 72;
+            // 
+            // cbxConsultorio
+            // 
+            this.cbxConsultorio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxConsultorio.Font = new System.Drawing.Font("Arial Narrow", 11F);
+            this.cbxConsultorio.FormattingEnabled = true;
+            this.cbxConsultorio.Items.AddRange(new object[] {
+            "Consultório 1",
+            "Consultório 2",
+            "Consultório 3",
+            "Consultório 4"});
+            this.cbxConsultorio.Location = new System.Drawing.Point(257, 129);
+            this.cbxConsultorio.Name = "cbxConsultorio";
+            this.cbxConsultorio.Size = new System.Drawing.Size(157, 28);
+            this.cbxConsultorio.TabIndex = 69;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(254, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "Consultório:";
+            // 
+            // cbxHorario
+            // 
+            this.cbxHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxHorario.Font = new System.Drawing.Font("Arial Narrow", 11F);
+            this.cbxHorario.FormattingEnabled = true;
+            this.cbxHorario.Items.AddRange(new object[] {
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00"});
+            this.cbxHorario.Location = new System.Drawing.Point(156, 129);
+            this.cbxHorario.Name = "cbxHorario";
+            this.cbxHorario.Size = new System.Drawing.Size(90, 28);
+            this.cbxHorario.TabIndex = 68;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(153, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 20);
+            this.label5.TabIndex = 70;
+            this.label5.Text = "Horário:";
             // 
             // label4
             // 
@@ -170,7 +266,7 @@
             this.txtNome.Location = new System.Drawing.Point(187, 56);
             this.txtNome.Name = "txtNome";
             this.txtNome.ReadOnly = true;
-            this.txtNome.Size = new System.Drawing.Size(677, 26);
+            this.txtNome.Size = new System.Drawing.Size(653, 26);
             this.txtNome.TabIndex = 1;
             // 
             // panel1
@@ -247,96 +343,32 @@
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // cbxConsultorio
+            // btnSelecionar
             // 
-            this.cbxConsultorio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxConsultorio.Font = new System.Drawing.Font("Arial Narrow", 11F);
-            this.cbxConsultorio.FormattingEnabled = true;
-            this.cbxConsultorio.Items.AddRange(new object[] {
-            "Consultório 1",
-            "Consultório 2",
-            "Consultório 3",
-            "Consultório 4"});
-            this.cbxConsultorio.Location = new System.Drawing.Point(257, 129);
-            this.cbxConsultorio.Name = "cbxConsultorio";
-            this.cbxConsultorio.Size = new System.Drawing.Size(157, 28);
-            this.cbxConsultorio.TabIndex = 69;
+            this.btnSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelecionar.BackgroundImage = global::View.Properties.Resources.search;
+            this.btnSelecionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSelecionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecionar.Location = new System.Drawing.Point(846, 60);
+            this.btnSelecionar.Name = "btnSelecionar";
+            this.btnSelecionar.Size = new System.Drawing.Size(18, 21);
+            this.btnSelecionar.TabIndex = 77;
+            this.btnSelecionar.TabStop = false;
+            this.toolTip.SetToolTip(this.btnSelecionar, "Encontrar Paciente");
+            this.btnSelecionar.Visible = false;
+            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
-            // label1
+            // lblcodigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
-            this.label1.TabIndex = 71;
-            this.label1.Text = "Consultório:";
-            // 
-            // cbxHorario
-            // 
-            this.cbxHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxHorario.Font = new System.Drawing.Font("Arial Narrow", 11F);
-            this.cbxHorario.FormattingEnabled = true;
-            this.cbxHorario.Items.AddRange(new object[] {
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00"});
-            this.cbxHorario.Location = new System.Drawing.Point(156, 129);
-            this.cbxHorario.Name = "cbxHorario";
-            this.cbxHorario.Size = new System.Drawing.Size(90, 28);
-            this.cbxHorario.TabIndex = 68;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(153, 105);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 20);
-            this.label5.TabIndex = 70;
-            this.label5.Text = "Horário:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(417, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 20);
-            this.label3.TabIndex = 73;
-            this.label3.Text = "*Nome do aluno que atendeu:";
-            // 
-            // txtNomeAlunoAtendeu
-            // 
-            this.txtNomeAlunoAtendeu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeAlunoAtendeu.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtNomeAlunoAtendeu.Location = new System.Drawing.Point(425, 130);
-            this.txtNomeAlunoAtendeu.Name = "txtNomeAlunoAtendeu";
-            this.txtNomeAlunoAtendeu.Size = new System.Drawing.Size(439, 26);
-            this.txtNomeAlunoAtendeu.TabIndex = 72;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 105);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 20);
-            this.label6.TabIndex = 75;
-            this.label6.Text = "Data:";
-            // 
-            // txtData
-            // 
-            this.txtData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtData.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtData.Location = new System.Drawing.Point(22, 130);
-            this.txtData.Name = "txtData";
-            this.txtData.ReadOnly = true;
-            this.txtData.Size = new System.Drawing.Size(118, 26);
-            this.txtData.TabIndex = 76;
+            this.lblcodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblcodigo.AutoSize = true;
+            this.lblcodigo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblcodigo.Location = new System.Drawing.Point(21, 9);
+            this.lblcodigo.Name = "lblcodigo";
+            this.lblcodigo.Size = new System.Drawing.Size(39, 14);
+            this.lblcodigo.TabIndex = 78;
+            this.lblcodigo.Text = "codigo";
             // 
             // FrmConsulta
             // 
@@ -358,6 +390,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.pnlDados.ResumeLayout(false);
             this.pnlDados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSelecionar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,5 +421,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox btnSelecionar;
+        private System.Windows.Forms.Label lblcodigo;
     }
 }

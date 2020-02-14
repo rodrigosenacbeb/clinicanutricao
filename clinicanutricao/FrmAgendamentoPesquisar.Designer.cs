@@ -32,14 +32,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.lblAcao = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dtpAte = new System.Windows.Forms.DateTimePicker();
-            this.dtpDe = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo_prontuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome_tmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +45,14 @@
             this.data_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblAcao = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dtpAte = new System.Windows.Forms.DateTimePicker();
+            this.dtpDe = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnVisualizar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
@@ -114,6 +114,90 @@
             this.dgvDados.Size = new System.Drawing.Size(900, 286);
             this.dgvDados.TabIndex = 21;
             this.dgvDados.DoubleClick += new System.EventHandler(this.dgvDados_DoubleClick);
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "codigo";
+            this.codigo.Name = "codigo";
+            this.codigo.Visible = false;
+            // 
+            // codigo_prontuario
+            // 
+            this.codigo_prontuario.DataPropertyName = "codigo_prontuario";
+            this.codigo_prontuario.HeaderText = "codigo_prontuario";
+            this.codigo_prontuario.Name = "codigo_prontuario";
+            this.codigo_prontuario.Visible = false;
+            // 
+            // nome_tmp
+            // 
+            this.nome_tmp.DataPropertyName = "nome_tmp";
+            this.nome_tmp.HeaderText = "Paciente";
+            this.nome_tmp.Name = "nome_tmp";
+            // 
+            // telcelular_tmp
+            // 
+            this.telcelular_tmp.DataPropertyName = "telcelular_tmp";
+            this.telcelular_tmp.HeaderText = "Telefone Celular";
+            this.telcelular_tmp.Name = "telcelular_tmp";
+            // 
+            // telfixo_tmp
+            // 
+            this.telfixo_tmp.DataPropertyName = "telfixo_tmp";
+            this.telfixo_tmp.HeaderText = "Telefone Fixo";
+            this.telfixo_tmp.Name = "telfixo_tmp";
+            // 
+            // data_nascimento
+            // 
+            this.data_nascimento.DataPropertyName = "data_nascimento";
+            this.data_nascimento.HeaderText = "data_nascimento";
+            this.data_nascimento.Name = "data_nascimento";
+            this.data_nascimento.Visible = false;
+            // 
+            // data_agendamento
+            // 
+            this.data_agendamento.DataPropertyName = "data_agendamento";
+            this.data_agendamento.HeaderText = "Data Agendamento";
+            this.data_agendamento.Name = "data_agendamento";
+            // 
+            // hora
+            // 
+            this.hora.DataPropertyName = "hora";
+            this.hora.HeaderText = "Hora";
+            this.hora.Name = "hora";
+            // 
+            // consultorio
+            // 
+            this.consultorio.DataPropertyName = "consultorio";
+            this.consultorio.HeaderText = "Consultório";
+            this.consultorio.Name = "consultorio";
+            // 
+            // observacoes
+            // 
+            this.observacoes.DataPropertyName = "observacoes";
+            this.observacoes.HeaderText = "observacoes";
+            this.observacoes.Name = "observacoes";
+            this.observacoes.Visible = false;
+            // 
+            // data_registro
+            // 
+            this.data_registro.DataPropertyName = "data_registro";
+            this.data_registro.HeaderText = "data_registro";
+            this.data_registro.Name = "data_registro";
+            this.data_registro.Visible = false;
+            // 
+            // tipo
+            // 
+            this.tipo.DataPropertyName = "tipo";
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
             // 
             // lblAcao
             // 
@@ -200,90 +284,6 @@
             this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 28;
             this.label4.Text = "Até:";
-            // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "codigo";
-            this.codigo.Name = "codigo";
-            this.codigo.Visible = false;
-            // 
-            // codigo_prontuario
-            // 
-            this.codigo_prontuario.DataPropertyName = "codigo_prontuario";
-            this.codigo_prontuario.HeaderText = "codigo_prontuario";
-            this.codigo_prontuario.Name = "codigo_prontuario";
-            this.codigo_prontuario.Visible = false;
-            // 
-            // nome_tmp
-            // 
-            this.nome_tmp.DataPropertyName = "nome_tmp";
-            this.nome_tmp.HeaderText = "Paciente";
-            this.nome_tmp.Name = "nome_tmp";
-            // 
-            // telcelular_tmp
-            // 
-            this.telcelular_tmp.DataPropertyName = "telcelular_tmp";
-            this.telcelular_tmp.HeaderText = "Telefone Celular";
-            this.telcelular_tmp.Name = "telcelular_tmp";
-            // 
-            // telfixo_tmp
-            // 
-            this.telfixo_tmp.DataPropertyName = "telfixo_tmp";
-            this.telfixo_tmp.HeaderText = "Telefone Fixo";
-            this.telfixo_tmp.Name = "telfixo_tmp";
-            // 
-            // data_nascimento
-            // 
-            this.data_nascimento.DataPropertyName = "data_nascimento";
-            this.data_nascimento.HeaderText = "data_nascimento";
-            this.data_nascimento.Name = "data_nascimento";
-            this.data_nascimento.Visible = false;
-            // 
-            // data_agendamento
-            // 
-            this.data_agendamento.DataPropertyName = "data_agendamento";
-            this.data_agendamento.HeaderText = "Data Agendamento";
-            this.data_agendamento.Name = "data_agendamento";
-            // 
-            // hora
-            // 
-            this.hora.DataPropertyName = "hora";
-            this.hora.HeaderText = "Hora";
-            this.hora.Name = "hora";
-            // 
-            // consultorio
-            // 
-            this.consultorio.DataPropertyName = "consultorio";
-            this.consultorio.HeaderText = "Consultório";
-            this.consultorio.Name = "consultorio";
-            // 
-            // observacoes
-            // 
-            this.observacoes.DataPropertyName = "observacoes";
-            this.observacoes.HeaderText = "observacoes";
-            this.observacoes.Name = "observacoes";
-            this.observacoes.Visible = false;
-            // 
-            // data_registro
-            // 
-            this.data_registro.DataPropertyName = "data_registro";
-            this.data_registro.HeaderText = "data_registro";
-            this.data_registro.Name = "data_registro";
-            this.data_registro.Visible = false;
-            // 
-            // tipo
-            // 
-            this.tipo.DataPropertyName = "tipo";
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
             // 
             // btnExcluir
             // 
