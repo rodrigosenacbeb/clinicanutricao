@@ -20,3 +20,4 @@ C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutric
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.exe
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.pdb
 C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.FrmMudarStatus.resources
+C:\Users\rodrigo.gsantana1\Desktop\PROJETO_CLINICA\clinicanutricao\clinicanutricao\obj\Debug\View.FrmConsulta.resources
