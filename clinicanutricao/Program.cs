@@ -16,12 +16,7 @@ namespace View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmPacienteCadastro(null, Model.Acao.Cadastrar));
-            //Application.Run(new FrmConfiguracoes());
-            //Application.Run(new FrmAgendamento(null, Model.Acao.Cadastrar));
-           // Application.Run(new FrmPacientePesquisar());
-           //Application.Run(new FrmAgendamento(null, Model.Acao.Cadastrar));
-           Application.Run(new FrmAgendamentoPesquisar());
+            Application.Run(new FrmAgendamentoPesquisar());
         }
     }
 }
